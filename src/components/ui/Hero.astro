@@ -1,0 +1,89 @@
+---
+/**
+ * Hero Component
+ * 
+ * A theme-aware hero section component for landing pages.
+ * 
+ * Architecture Decisions:
+ * 1. Integrates with Button component - demonstrates component composition
+ * 2. Uses semantic tokens for all text colors - works across all themes
+ * 3. Responsive text sizing - mobile-first approach
+ * 4. Flexible CTA system - supports primary and secondary actions
+ * 
+ * This component shows how to build page-level components using the UI library.
+ * All styling uses tokens - no hardcoded values.
+ */
+
+import Button from './Button.astro';
+
+export interface Props {
+  title: string;
+  subtitle?: string;
+  primaryCta?: {
+    text: string;
+    href: string;
+    variant?: 'primary' | 'secondary' | 'outline';
+  };
+  secondaryCta?: {
+    text: string;
+    href: string;
+    variant?: 'primary' | 'secondary' | 'outline';
+  };
+  class?: string;
+}
+
+const {
+  title,
+  subtitle,
+  primaryCta,
+  secondaryCta,
+  class: className = '',
+} = Astro.props;
+---
+
+<section
+  class={`max-w-6xl mx-auto px-4 py-20 md:py-32 text-center ${className}`}
+  aria-labelledby="hero-heading"
+>
+  <h1
+    id="hero-heading"
+    class="text-5xl md:text-6xl font-bold mb-6"
+    style="color: var(--token-color-text-primary);"
+  >
+    {title}
+  </h1>
+  
+  {subtitle && (
+    <p
+      class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto"
+      style="color: var(--token-color-text-muted);"
+    >
+      {subtitle}
+    </p>
+  )}
+  
+  {(primaryCta || secondaryCta) && (
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      {primaryCta && (
+        <Button
+          href={primaryCta.href}
+          variant={primaryCta.variant || 'primary'}
+          size="lg"
+        >
+          {primaryCta.text}
+        </Button>
+      )}
+      {secondaryCta && (
+        <Button
+          href={secondaryCta.href}
+          variant={secondaryCta.variant || 'outline'}
+          size="lg"
+        >
+          {secondaryCta.text}
+        </Button>
+      )}
+    </div>
+  )}
+  
+  <slot />
+</section>

@@ -1,0 +1,119 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer
+  id="contact"
+  class="w-full py-12"
+  role="contentinfo"
+  style="background-color: var(--token-color-background, #ffffff);"
+>
+  <div class="w-full border-t mb-12" style="border-color: var(--token-color-border, #e5e7eb);"></div>
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <h2 class="text-lg font-semibold mb-4" style="color: var(--token-color-text-primary, #111827);">Astro Theme Switcher</h2>
+        <p style="color: var(--token-color-text-muted, #6b7280);">
+          A production-ready, token-based themeable design system for Astro. Build beautiful websites with runtime theme switching and semantic design tokens.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold mb-4" style="color: var(--token-color-text-primary, #111827);">Links</h2>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="/blog"
+              class="transition-colors"
+              style="color: var(--token-color-text-muted, #6b7280);"
+              onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
+              onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="/features"
+              class="transition-colors"
+              style="color: var(--token-color-text-muted, #6b7280);"
+              onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
+              onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="/about"
+              class="transition-colors"
+              style="color: var(--token-color-text-muted, #6b7280);"
+              onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
+              onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="/contact"
+              class="transition-colors"
+              style="color: var(--token-color-text-muted, #6b7280);"
+              onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
+              onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold mb-4" style="color: var(--token-color-text-primary, #111827);">Connect</h2>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="https://github.com"
+              class="flex items-center gap-2 transition-colors"
+              style="color: var(--token-color-text-muted, #6b7280);"
+              onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
+              onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our GitHub (opens in new tab)"
+            >
+              <Icon name="tabler:brand-github" class="w-5 h-5" aria-hidden="true" />
+              <span>GitHub</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://twitter.com"
+              class="flex items-center gap-2 transition-colors"
+              style="color: var(--token-color-text-muted, #6b7280);"
+              onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
+              onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow us on Twitter (opens in new tab)"
+            >
+              <Icon name="tabler:brand-twitter" class="w-5 h-5" aria-hidden="true" />
+              <span>Twitter</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="/contact"
+              class="flex items-center gap-2 transition-colors"
+              style="color: var(--token-color-text-muted, #6b7280);"
+              onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
+              onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
+            >
+              <Icon name="tabler:mail" class="w-5 h-5" aria-hidden="true" />
+              <span>Email</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="w-full border-t pt-8" style="border-color: var(--token-color-border, #e5e7eb);">
+      <div class="max-w-6xl mx-auto px-4 text-center" style="color: var(--token-color-text-muted, #6b7280);">
+        <p>&copy; {new Date().getFullYear()} Astro Theme Switcher. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
