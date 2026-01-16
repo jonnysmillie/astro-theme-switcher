@@ -9,7 +9,7 @@ export const tokens: DesignTokens = {
     accent: '#bae6fd',
     accentForeground: '#0c4a6e',
     background: '#f0f9ff',
-    surface: '#e0f2fe',
+    surface: '#bae6fd',
     surfaceElevated: '#ffffff',
     text: {
       primary: '#0c4a6e',

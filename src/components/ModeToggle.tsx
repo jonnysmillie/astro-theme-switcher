@@ -59,7 +59,7 @@ export default function ModeToggle() {
     <button
       type="button"
       onClick={handleToggle}
-      className="p-2 rounded-lg transition-colors"
+      className="p-2 rounded-lg transition-colors cursor-pointer"
       style={{
         backgroundColor: 'transparent',
       }}

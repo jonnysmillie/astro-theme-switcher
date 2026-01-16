@@ -75,7 +75,32 @@ p {
 }
 
 .prose pre {
-  background-color: var(--token-color-surface, #f9fafb);
+  /* Use lighter background in light mode for better visual appearance */
+  background-color: var(--token-color-background, #ffffff);
+  border: 1px solid var(--token-color-border, #e5e7eb);
+  padding: 1rem;
+  border-radius: var(--token-radius-lg, 0.5rem);
+}
+
+/* Light mode: ensure very dark text for maximum legibility */
+[data-mode="light"] .prose pre {
+  background-color: var(--token-color-background, #ffffff);
+  border-color: var(--token-color-border, #e5e7eb);
+}
+
+[data-mode="light"] .prose pre code {
+  color: var(--token-color-text-primary, #111827);
+  font-weight: 500;
+}
+
+/* Dark mode: use surface color for contrast */
+[data-mode="dark"] .prose pre {
+  background-color: var(--token-color-surface, #1f2937);
+  border-color: var(--token-color-border, #374151);
+}
+
+[data-mode="dark"] .prose pre code {
+  color: var(--token-color-text-primary, #f9fafb);
 }
 
 .prose pre code {
@@ -167,4 +192,8 @@ textarea:focus {
 
 button[type="submit"]:hover:not(:disabled) {
   opacity: 0.9;
+}
+
+[data-language="plaintext"] span {
+  color: #fefefe!important;
 }

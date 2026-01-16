@@ -86,7 +86,7 @@ export default function ThemeSwitcher() {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg transition-colors text-sm font-medium"
+        className="flex items-center gap-2 px-3 py-2 rounded-lg transition-colors text-sm font-medium cursor-pointer"
         style={{
           backgroundColor: 'transparent',
           color: 'var(--token-color-text-primary, #111827)',
@@ -132,7 +132,7 @@ export default function ThemeSwitcher() {
                   key={themeId}
                   type="button"
                   onClick={() => handleThemeChange(themeId)}
-                  className="w-full text-left px-3 py-2 rounded-md text-sm transition-colors"
+                  className="w-full text-left px-3 py-2 rounded-md text-sm transition-colors cursor-pointer"
                   style={{
                     backgroundColor: currentTheme === themeId 
                       ? 'var(--token-color-accent, rgba(0, 0, 0, 0.05))' 
