@@ -3,7 +3,7 @@ title: "Welcome to the Blog"
 description: "This is your first blog post using Astro Content Collections. Learn how to create and manage blog posts with type safety."
 pubDate: "2024-01-15"
 updatedDate: "2024-01-15"
-heroImage: "landscape.jpg"
+heroImage: "1.jpg"
 tags: ["astro", "blog", "getting-started"]
 author: "Astro Theme Switcher"
 ---

@@ -64,7 +64,7 @@ const alertId = `alert-${Math.random().toString(36).substr(2, 9)}`;
   class={`${baseClasses} ${className}`}
   style={`
     background-color: ${style.background};
-    color: ${style.foreground};
+    color: #ffffff;
     border-color: ${style.border};
     border-width: 1px;
     transition-duration: ${motionDuration};
@@ -73,11 +73,11 @@ const alertId = `alert-${Math.random().toString(36).substr(2, 9)}`;
 >
   <div class="flex-1">
     {title && (
-      <h4 class="font-semibold mb-1" style="color: var(--token-color-text-inverse, #ffffff);">
+      <h4 class="font-semibold mb-1" style="color: #ffffff;">
         {title}
       </h4>
     )}
-    <div class="text-sm">
+    <div class="text-sm" style="color: #ffffff;">
       <slot />
     </div>
   </div>
@@ -86,7 +86,7 @@ const alertId = `alert-${Math.random().toString(36).substr(2, 9)}`;
       type="button"
       class="ml-auto p-1 rounded hover:opacity-70 transition-opacity"
       style={`
-        color: ${style.foreground};
+        color: #ffffff;
         transition-duration: ${motionDuration};
         transition-timing-function: ${motionEasing};
       `}

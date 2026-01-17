@@ -29,9 +29,9 @@ import ModeToggle from "./ModeToggle.tsx";
     <button
       type="button"
       class="md:hidden p-2 focus:outline-none focus:ring-2 rounded-lg transition-colors"
-      style="color: var(--token-color-text-muted, #6b7280);"
-      onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
-      onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
+      style="color: var(--token-color-text-primary, #111827);"
+      onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-primary, #000000)'}
+      onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
       onfocus={(e) => {
         e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)';
         e.currentTarget.style.outline = '2px solid var(--token-color-primary, #000000)';
@@ -49,11 +49,23 @@ import ModeToggle from "./ModeToggle.tsx";
     <ul class="hidden md:flex items-center gap-6" role="list">
       <li>
         <a
+          href="/landing"
+          class="transition-colors"
+          style="color: var(--token-color-text-primary, #111827);"
+          onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-primary, #000000)'}
+          onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
+          aria-current={Astro.url.pathname === '/landing' ? 'page' : undefined}
+        >
+          Landing
+        </a>
+      </li>
+      <li>
+        <a
           href="/blog"
           class="transition-colors"
-          style="color: var(--token-color-text-muted, #6b7280);"
-          onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
-          onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
+          style="color: var(--token-color-text-primary, #111827);"
+          onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-primary, #000000)'}
+          onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
           aria-current={Astro.url.pathname.startsWith('/blog') ? 'page' : undefined}
         >
           Blog
@@ -63,9 +75,9 @@ import ModeToggle from "./ModeToggle.tsx";
         <a
           href="/features"
           class="transition-colors"
-          style="color: var(--token-color-text-muted, #6b7280);"
-          onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
-          onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
+          style="color: var(--token-color-text-primary, #111827);"
+          onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-primary, #000000)'}
+          onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
           aria-current={Astro.url.pathname === '/features' ? 'page' : undefined}
         >
           Features
@@ -75,9 +87,9 @@ import ModeToggle from "./ModeToggle.tsx";
         <a
           href="/about"
           class="transition-colors"
-          style="color: var(--token-color-text-muted, #6b7280);"
-          onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
-          onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
+          style="color: var(--token-color-text-primary, #111827);"
+          onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-primary, #000000)'}
+          onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
           aria-current={Astro.url.pathname === '/about' ? 'page' : undefined}
         >
           About
@@ -119,15 +131,34 @@ import ModeToggle from "./ModeToggle.tsx";
     <ul class="flex flex-col py-4" role="list">
       <li>
         <a
-          href="/blog"
+          href="/landing"
           class="block px-4 py-3 transition-colors"
-          style="color: var(--token-color-text-muted, #6b7280);"
+          style="color: var(--token-color-text-primary, #111827);"
           onmouseenter={(e) => {
-            e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)';
+            e.currentTarget.style.color = 'var(--token-color-primary, #000000)';
             e.currentTarget.style.backgroundColor = 'var(--token-color-accent, rgba(0, 0, 0, 0.05))';
           }}
           onmouseleave={(e) => {
-            e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)';
+            e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)';
+            e.currentTarget.style.backgroundColor = 'transparent';
+          }}
+          role="menuitem"
+          aria-current={Astro.url.pathname === '/landing' ? 'page' : undefined}
+        >
+          Landing
+        </a>
+      </li>
+      <li>
+        <a
+          href="/blog"
+          class="block px-4 py-3 transition-colors"
+          style="color: var(--token-color-text-primary, #111827);"
+          onmouseenter={(e) => {
+            e.currentTarget.style.color = 'var(--token-color-primary, #000000)';
+            e.currentTarget.style.backgroundColor = 'var(--token-color-accent, rgba(0, 0, 0, 0.05))';
+          }}
+          onmouseleave={(e) => {
+            e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)';
             e.currentTarget.style.backgroundColor = 'transparent';
           }}
           role="menuitem"
@@ -140,13 +171,13 @@ import ModeToggle from "./ModeToggle.tsx";
         <a
           href="/features"
           class="block px-4 py-3 transition-colors"
-          style="color: var(--token-color-text-muted, #6b7280);"
+          style="color: var(--token-color-text-primary, #111827);"
           onmouseenter={(e) => {
-            e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)';
+            e.currentTarget.style.color = 'var(--token-color-primary, #000000)';
             e.currentTarget.style.backgroundColor = 'var(--token-color-accent, rgba(0, 0, 0, 0.05))';
           }}
           onmouseleave={(e) => {
-            e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)';
+            e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)';
             e.currentTarget.style.backgroundColor = 'transparent';
           }}
           role="menuitem"
@@ -159,13 +190,13 @@ import ModeToggle from "./ModeToggle.tsx";
         <a
           href="/about"
           class="block px-4 py-3 transition-colors"
-          style="color: var(--token-color-text-muted, #6b7280);"
+          style="color: var(--token-color-text-primary, #111827);"
           onmouseenter={(e) => {
-            e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)';
+            e.currentTarget.style.color = 'var(--token-color-primary, #000000)';
             e.currentTarget.style.backgroundColor = 'var(--token-color-accent, rgba(0, 0, 0, 0.05))';
           }}
           onmouseleave={(e) => {
-            e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)';
+            e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)';
             e.currentTarget.style.backgroundColor = 'transparent';
           }}
           role="menuitem"
@@ -178,13 +209,13 @@ import ModeToggle from "./ModeToggle.tsx";
         <a
           href="/contact"
           class="block px-4 py-3 transition-colors"
-          style="color: var(--token-color-text-muted, #6b7280);"
+          style="color: var(--token-color-text-primary, #111827);"
           onmouseenter={(e) => {
-            e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)';
+            e.currentTarget.style.color = 'var(--token-color-primary, #000000)';
             e.currentTarget.style.backgroundColor = 'var(--token-color-hover, rgba(0, 0, 0, 0.05))';
           }}
           onmouseleave={(e) => {
-            e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)';
+            e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)';
             e.currentTarget.style.backgroundColor = 'transparent';
           }}
           role="menuitem"

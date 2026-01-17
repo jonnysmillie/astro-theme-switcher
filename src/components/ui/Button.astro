@@ -24,6 +24,7 @@ export interface Props {
   href?: string;
   class?: string;
   ariaLabel?: string;
+  onclick?: string;
 }
 
 const {
@@ -34,6 +35,7 @@ const {
   href,
   class: className = '',
   ariaLabel,
+  onclick,
 } = Astro.props;
 
 const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
@@ -57,8 +59,8 @@ const variantStyles = {
   },
   outline: {
     background: 'transparent',
-    color: 'var(--token-color-text-primary)',
-    border: '1px solid var(--token-color-border)',
+    color: 'var(--token-color-primary)',
+    border: '1px solid var(--token-color-primary)',
     hover: 'background-color: var(--token-color-hover)',
     focus: 'var(--token-color-focus)',
   },
@@ -106,10 +108,11 @@ const motionEasing = 'var(--token-motion-easing-default)';
     style={`
       background-color: ${style.background};
       color: ${style.color};
-      ${style.border || ''}
+      ${'border' in style && style.border ? `border: ${style.border};` : ''}
       transition-duration: ${motionDuration};
       transition-timing-function: ${motionEasing};
     `}
+    onclick={onclick}
     onmouseenter={(e) => {
       if (style.hover && style.hover.includes('opacity')) {
         e.currentTarget.style.opacity = '0.9';
@@ -146,10 +149,11 @@ const motionEasing = 'var(--token-motion-easing-default)';
     style={`
       background-color: ${style.background};
       color: ${style.color};
-      ${style.border || ''}
+      ${'border' in style && style.border ? `border: ${style.border};` : ''}
       transition-duration: ${motionDuration};
       transition-timing-function: ${motionEasing};
     `}
+    onclick={onclick}
     onmouseenter={(e) => {
       if (!disabled && style.hover && style.hover.includes('opacity')) {
         e.currentTarget.style.opacity = '0.9';

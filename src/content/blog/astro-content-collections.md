@@ -3,7 +3,7 @@ title: "Understanding Astro Content Collections"
 description: "A deep dive into how Astro Content Collections work and why they're useful for managing blog content."
 pubDate: "2024-01-20"
 updatedDate: "2024-01-22"
-heroImage: "river.jpg"
+heroImage: "2.jpg"
 tags: ["astro", "content-collections", "tutorial"]
 author: "Astro Theme Switcher"
 ---

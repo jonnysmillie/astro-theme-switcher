@@ -2,7 +2,7 @@
 title: "Markdown Features in Astro"
 description: "Explore the powerful Markdown features available when writing blog posts in Astro."
 pubDate: "2024-01-25"
-heroImage: "forest.jpg"
+heroImage: "3.jpg"
 tags: ["markdown", "astro", "mdx"]
 author: "Astro Theme Switcher"
 ---

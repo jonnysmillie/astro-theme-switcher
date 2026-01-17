@@ -9,9 +9,20 @@ import { Icon } from "astro-icon/components";
   </ScrollReveal>
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
     <ScrollReveal client:idle delay={0.2} scale={true}>
-      <div
-        class="p-6 rounded-lg border hover:shadow-lg transition-shadow h-full flex flex-col"
-        style="background-color: var(--token-color-background, #ffffff); border-color: var(--token-color-border, #e5e7eb);"
+      <a
+        href="/theme"
+        class="block p-6 rounded-lg border transition-all cursor-pointer h-full flex flex-col"
+        style="background-color: var(--token-color-background, #ffffff); border-color: var(--token-color-border, #e5e7eb); transition-duration: var(--token-motion-duration-normal); transition-timing-function: var(--token-motion-easing-default);"
+        onmouseenter={(e) => {
+          e.currentTarget.style.backgroundColor = 'var(--token-color-hover, rgba(0, 0, 0, 0.05))';
+          e.currentTarget.style.borderColor = 'var(--token-color-primary)';
+          e.currentTarget.style.boxShadow = 'var(--token-shadow-2)';
+        }}
+        onmouseleave={(e) => {
+          e.currentTarget.style.backgroundColor = 'var(--token-color-background, #ffffff)';
+          e.currentTarget.style.borderColor = 'var(--token-color-border, #e5e7eb)';
+          e.currentTarget.style.boxShadow = 'none';
+        }}
       >
         <div
           class="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
@@ -23,7 +34,7 @@ import { Icon } from "astro-icon/components";
         <p class="min-h-[4.5rem] flex-1" style="color: var(--token-color-text-muted, #6b7280);">
           Built-in theme switcher with multiple color schemes. Switch between light, dark, and custom color themes with smooth transitions and persistent preferences across all pages.
         </p>
-      </div>
+      </a>
     </ScrollReveal>
     <ScrollReveal client:idle delay={0.3} scale={true}>
       <div

@@ -190,19 +190,154 @@ import PricingTable from '@/components/ui/PricingTable.astro';
 />
 ```
 
+### Modal
+
+A modal/dialog component for displaying content, forms, and confirmations.
+
+```astro
+---
+import Modal from '@/components/ui/Modal.astro';
+import Button from '@/components/ui/Button.astro';
+---
+
+<Button onclick="openModal('my-modal')">Open Modal</Button>
+
+<Modal id="my-modal" title="Example Modal" size="md">
+  <p>Modal content goes here.</p>
+</Modal>
+```
+
+**Sizes:** `sm`, `md`, `lg`, `xl`, `fullscreen`  
+**Variants:** `default`, `alert`, `form`
+
+### Toast
+
+A toast notification component for user feedback.
+
+```astro
+---
+import ToastContainer, { toast } from '@/components/ui/ToastContainer.tsx';
+import Button from '@/components/ui/Button.astro';
+---
+
+<Button onclick="toast({ message: 'Success!', variant: 'success' })">
+  Show Toast
+</Button>
+
+<ToastContainer client:load />
+```
+
+**Variants:** `success`, `error`, `warning`, `info`  
+**Positions:** `top-right`, `top-left`, `bottom-right`, `bottom-left`, `top-center`, `bottom-center`
+
+### Accordion
+
+An accordion component for collapsible content sections.
+
+```astro
+---
+import Accordion from '@/components/ui/Accordion.astro';
+---
+
+<Accordion
+  client:load
+  items={[
+    {
+      id: 'item-1',
+      title: 'Question 1?',
+      content: 'Answer to question 1.',
+    },
+    {
+      id: 'item-2',
+      title: 'Question 2?',
+      content: 'Answer to question 2.',
+    },
+  ]}
+  allowMultiple={false}
+  variant="default"
+/>
+```
+
+**Variants:** `default`, `bordered`, `flush`  
+**Options:** `allowMultiple` - Allow multiple items open at once
+
+### Tabs
+
+A tabs component for organizing content.
+
+```astro
+---
+import Tabs from '@/components/ui/Tabs.astro';
+---
+
+<Tabs
+  client:load
+  items={[
+    {
+      id: 'tab-1',
+      label: 'Tab One',
+      content: '<p>Content for tab one.</p>',
+    },
+    {
+      id: 'tab-2',
+      label: 'Tab Two',
+      content: '<p>Content for tab two.</p>',
+    },
+  ]}
+  variant="default"
+  orientation="horizontal"
+/>
+```
+
+**Variants:** `default`, `pills`, `underlined`  
+**Orientations:** `horizontal`, `vertical`
+
+### DataTable
+
+A data table component with sorting, filtering, and pagination.
+
+```astro
+---
+import DataTable from '@/components/ui/DataTable.astro';
+---
+
+<DataTable
+  client:load
+  data={[
+    { name: 'John', email: 'john@example.com', role: 'Admin' },
+    { name: 'Jane', email: 'jane@example.com', role: 'User' },
+  ]}
+  columns={[
+    { key: 'name', label: 'Name', sortable: true },
+    { key: 'email', label: 'Email', sortable: true },
+    { key: 'role', label: 'Role', sortable: true },
+  ]}
+  searchable={true}
+  sortable={true}
+  pagination={true}
+/>
+```
+
+**Features:** Searchable, sortable columns, pagination, responsive
+
 ## Usage
 
 All components automatically adapt to the current theme. Simply switch themes and components will update their colors, shadows, and motion accordingly.
 
 ```astro
 ---
-import { Button, Card, Alert } from '@/components/ui';
+import { Button, Card, Alert, Modal, Accordion, Tabs, DataTable } from '@/components/ui';
+import { ToastContainer, toast } from '@/components/ui/ToastContainer.tsx';
 ---
 
 <Card variant="elevated">
   <Alert variant="info">This is an info alert</Alert>
-  <Button variant="primary">Action</Button>
+  <Button variant="primary" onclick="toast({ message: 'Clicked!', variant: 'success' })">
+    Action
+  </Button>
 </Card>
+
+<ToastContainer client:load />
 ```
 
 ## Token Reference

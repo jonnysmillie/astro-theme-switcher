@@ -1,14 +1,20 @@
 // Import blog images
-import landscape from '../assets/blog/landscape.jpg';
-import river from '../assets/blog/river.jpg';
-import forest from '../assets/blog/forest.jpg';
+import image1 from '../assets/blog/1.jpg';
+import image2 from '../assets/blog/2.jpg';
+import image3 from '../assets/blog/3.jpg';
+import image4 from '../assets/blog/4.jpg';
+import image5 from '../assets/blog/5.jpg';
+import image6 from '../assets/blog/6.jpg';
 import type { ImageMetadata } from 'astro';
 
 // Map image filenames to imported images
 export const blogImages: Record<string, ImageMetadata> = {
-	'landscape.jpg': landscape,
-	'river.jpg': river,
-	'forest.jpg': forest,
+	'1.jpg': image1,
+	'2.jpg': image2,
+	'3.jpg': image3,
+	'4.jpg': image4,
+	'5.jpg': image5,
+	'6.jpg': image6,
 };
 
 // Helper function to get image by filename
