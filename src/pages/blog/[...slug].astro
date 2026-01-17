@@ -70,6 +70,7 @@ const ogImageUrl = heroImage ? new URL(heroImage.src, import.meta.env.SITE || SI
 						alt={post.data.title}
 						transition:name={`blog-image-${post.slug}`}
 						class="w-full h-96 md:h-[500px] object-cover rounded-lg"
+						style="border-radius: 0.5rem;"
 						loading="eager"
 						widths={[400, 800, 1200, 1600]}
 						sizes="(max-width: 768px) 100vw, 1200px"
@@ -143,3 +144,12 @@ const ogImageUrl = heroImage ? new URL(heroImage.src, import.meta.env.SITE || SI
 	</main>
 	<Footer />
 </Layout>
+
+<style>
+	/* Critical CSS: Ensure border-radius is applied immediately to prevent FOUC */
+	article > div img,
+	article > div[data-astro-cid] img,
+	article > div > img {
+		border-radius: 0.5rem;
+	}
+</style>

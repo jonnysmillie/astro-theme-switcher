@@ -154,15 +154,15 @@ const importExample = `@import './light/theme.css';
             <ul class="space-y-3 mb-6 text-text-muted">
               <li class="flex items-start">
                 <span class="mr-2 text-primary">•</span>
-                <span><strong class="text-text-primary">tokens.ts</strong> - Defines all design tokens (colors, typography, spacing, etc.)</span>
+                <span><strong class="text-text-primary">tokens.ts</strong> - Defines all design tokens (colors, typography, spacing, etc.) - <em>You edit this</em></span>
               </li>
               <li class="flex items-start">
                 <span class="mr-2 text-primary">•</span>
-                <span><strong class="text-text-primary">meta.json</strong> - Theme metadata (name, description, version)</span>
+                <span><strong class="text-text-primary">meta.json</strong> - Theme metadata (name, description, version) - <em>You edit this</em></span>
               </li>
               <li class="flex items-start">
                 <span class="mr-2 text-primary">•</span>
-                <span><strong class="text-text-primary">theme.css</strong> - Generated CSS custom properties (auto-generated from tokens)</span>
+                <span><strong class="text-text-primary">theme.css</strong> - Generated CSS custom properties (auto-generated from tokens via <code class="px-1 py-0.5 rounded bg-surface text-text-primary">npm run generate-themes</code>) - <em>Auto-generated, don't edit</em></span>
               </li>
             </ul>
             <p class="text-text-muted">
@@ -249,15 +249,35 @@ const importExample = `@import './light/theme.css';
             <div class="flex items-start mb-4">
               <div class="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold mr-4 flex-shrink-0">4</div>
               <div class="flex-1">
-                <h3 class="text-2xl font-semibold mb-3 text-text-primary">Create Theme CSS</h3>
+                <h3 class="text-2xl font-semibold mb-3 text-text-primary">Generate Theme CSS</h3>
                 <p class="mb-4 text-text-muted">
-                  Create <code class="px-2 py-1 rounded bg-surface text-text-primary">theme.css</code> with CSS custom properties for both light and dark modes. Copy from an existing theme and update the values.
+                  The <code class="px-2 py-1 rounded bg-surface text-text-primary">theme.css</code> file is <strong>automatically generated</strong> from your tokens. You don't need to write CSS manually!
                 </p>
+                <div class="bg-surface rounded-lg p-4 border border-border mb-4">
+                  <pre class="text-sm text-text-primary overflow-x-auto"><code>npm run generate-themes</code></pre>
+                </div>
+                <p class="mb-4 text-text-muted">
+                  This command will:
+                </p>
+                <ul class="space-y-2 mb-4 text-text-muted">
+                  <li class="flex items-start">
+                    <span class="mr-2 text-primary">•</span>
+                    <span>Read your <code class="px-1 py-0.5 rounded bg-surface text-text-primary">tokens.ts</code> file</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2 text-primary">•</span>
+                    <span>Generate <code class="px-1 py-0.5 rounded bg-surface text-text-primary">theme.css</code> with CSS custom properties</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2 text-primary">•</span>
+                    <span>Automatically create both light and dark mode variants</span>
+                  </li>
+                </ul>
                 <div class="bg-surface rounded-lg p-4 border border-border">
                   <pre class="text-sm text-text-primary overflow-x-auto" set:html={`<code>${cssExample}</code>`}></pre>
                 </div>
                 <p class="mt-4 text-sm text-text-muted">
-                  💡 <strong>Tip:</strong> Copy <code class="px-1 py-0.5 rounded bg-surface text-text-primary">theme.css</code> from an existing theme (e.g., <code class="px-1 py-0.5 rounded bg-surface text-text-primary">blue/theme.css</code>) and replace all color values with your theme's colors.
+                  💡 <strong>Note:</strong> The <code class="px-1 py-0.5 rounded bg-surface text-text-primary">theme.css</code> file is auto-generated. Always edit <code class="px-1 py-0.5 rounded bg-surface text-text-primary">tokens.ts</code> and run <code class="px-1 py-0.5 rounded bg-surface text-text-primary">npm run generate-themes</code> to regenerate the CSS.
                 </p>
               </div>
             </div>

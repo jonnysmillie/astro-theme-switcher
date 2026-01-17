@@ -88,17 +88,23 @@ Create `src/themes/my-theme/meta.json`:
 
 ### Step 4: Generate CSS
 
-The CSS file (`theme.css`) is auto-generated from tokens. You can regenerate it using the utility function:
+The CSS file (`theme.css`) is **automatically generated** from `tokens.ts`. You don't need to write CSS manually!
 
-```typescript
-import { generateThemeCSS } from '../themes/utils';
-import { tokens } from './tokens';
-import meta from './meta.json';
-
-const css = generateThemeCSS({ meta, tokens });
+**Generate CSS for all themes:**
+```bash
+npm run generate-themes
 ```
 
-Or manually create it following the pattern in existing themes.
+This script:
+- Reads all `tokens.ts` files
+- Generates `theme.css` for each theme
+- Handles light/dark mode variants automatically
+- Uses special selectors for `light` (`:root`) and `dark` (`[data-theme="dark"]`) themes
+
+**After modifying tokens:**
+Always run `npm run generate-themes` to regenerate the CSS files. The script ensures your CSS stays in sync with your token definitions.
+
+**Note:** The `theme.css` files are generated and should not be edited manually. All changes should be made in `tokens.ts`.
 
 ### Step 5: Register Theme
 

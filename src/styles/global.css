@@ -195,5 +195,17 @@ button[type="submit"]:hover:not(:disabled) {
 }
 
 [data-language="plaintext"] span {
-  color: #fefefe!important;
+	color: #fefefe!important;
+}
+
+/* Blog images: Ensure border-radius is applied immediately to prevent FOUC */
+main article img[alt],
+main article [data-astro-cid] img {
+	border-radius: 0.5rem;
+}
+
+/* Blog index page: Top corners only for card images */
+main article a > div img,
+main article a > div[data-astro-cid] img {
+	border-radius: 0.5rem 0.5rem 0 0;
 }

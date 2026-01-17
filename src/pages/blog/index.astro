@@ -50,12 +50,13 @@ const blogPosts = (await getCollection('blog')).sort(
 									class="block group"
 								>
 									{heroImage && (
-										<div class="w-full h-48 md:h-56 overflow-hidden">
+										<div class="w-full h-48 md:h-56 overflow-hidden rounded-t-lg">
 											<Image
 												src={heroImage}
 												alt={post.data.title}
 												transition:name={`blog-image-${post.slug}`}
-												class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+												class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200 rounded-t-lg"
+												style="border-radius: 0.5rem 0.5rem 0 0;"
 												loading="lazy"
 												widths={[400, 800, 1200]}
 												sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -96,3 +97,12 @@ const blogPosts = (await getCollection('blog')).sort(
 	</main>
 	<Footer />
 </Layout>
+
+<style>
+	/* Critical CSS: Ensure border-radius is applied immediately to prevent FOUC */
+	article a > div img,
+	article a > div[data-astro-cid] img,
+	article a > div > img {
+		border-radius: 0.5rem 0.5rem 0 0;
+	}
+</style>
