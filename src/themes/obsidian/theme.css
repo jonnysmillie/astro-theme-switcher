@@ -77,10 +77,10 @@
 [data-theme="obsidian"][data-mode="dark"] {
   --token-color-primary: #0ea5e9;
   --token-color-primary-foreground: #ffffff;
-  --token-color-secondary: #43494c;
-  --token-color-secondary-foreground: #0b4363;
-  --token-color-accent: #252e33;
-  --token-color-accent-foreground: #0b4363;
+  --token-color-secondary: #546e7a;
+  --token-color-secondary-foreground: #f2f2f2;
+  --token-color-accent: #4d5f67;
+  --token-color-accent-foreground: #f2f2f2;
   --token-color-background: #242526;
   --token-color-surface: #3c3e40;
   --token-color-surface-elevated: #545759;

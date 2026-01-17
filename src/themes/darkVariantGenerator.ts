@@ -43,6 +43,21 @@ function adjustBrightness(hex: string, factor: number): string {
 }
 
 /**
+ * Mix two colors together
+ */
+function mixColors(color1: string, color2: string, ratio: number): string {
+  const rgb1 = hexToRgb(color1);
+  const rgb2 = hexToRgb(color2);
+  if (!rgb1 || !rgb2) return color1;
+
+  const r = Math.round(rgb1.r * (1 - ratio) + rgb2.r * ratio);
+  const g = Math.round(rgb1.g * (1 - ratio) + rgb2.g * ratio);
+  const b = Math.round(rgb1.b * (1 - ratio) + rgb2.b * ratio);
+
+  return rgbToHex(r, g, b);
+}
+
+/**
  * Invert a color (for dark backgrounds)
  */
 function invertColor(hex: string): string {
@@ -81,11 +96,24 @@ export function generateDarkVariant(lightTokens: DesignTokens): DesignTokens {
       primary: lightTokens.color.primary,
       primaryForeground: lightTokens.color.primaryForeground,
       
-      // Invert secondary and accent
-      secondary: adjustBrightness(lightTokens.color.secondary, 0.3),
-      secondaryForeground: adjustBrightness(lightTokens.color.secondaryForeground, 0.9),
-      accent: adjustBrightness(lightTokens.color.accent, 0.2),
-      accentForeground: adjustBrightness(lightTokens.color.accentForeground, 0.9),
+      // Secondary: Create a visible, theme-aware secondary color for dark mode
+      // Mix the primary color with the dark surface to maintain theme identity
+      // while ensuring good contrast and legibility
+      secondary: mixColors(
+        adjustBrightness(lightTokens.color.background, 0.4), // Base dark surface
+        lightTokens.color.primary, // Theme primary color
+        0.15 // 15% primary color tint for theme identity
+      ),
+      // Secondary foreground: Always use light text for dark secondary backgrounds
+      secondaryForeground: adjustBrightness(lightTokens.color.text.inverse, 0.95), // Very light text (white-ish)
+      
+      // Accent: Similar approach - visible with theme identity
+      accent: mixColors(
+        adjustBrightness(lightTokens.color.background, 0.35),
+        lightTokens.color.primary,
+        0.1 // 10% primary color tint
+      ),
+      accentForeground: adjustBrightness(lightTokens.color.text.inverse, 0.95), // Very light text
       
       // Adjust borders
       border: adjustBrightness(lightTokens.color.border, 0.4),
