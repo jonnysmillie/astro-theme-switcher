@@ -40,6 +40,12 @@ module.exports = {
         parser: "@typescript-eslint/parser",
         extraFileExtensions: [".astro"],
       },
+      // Disable React rules for Astro files - Astro uses 'class' not 'className'
+      rules: {
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "react/no-unknown-property": "off", // Allows 'class' instead of 'className'
+      },
     },
   ],
   settings: {
