@@ -293,7 +293,13 @@ See [THEME_SYSTEM.md](./THEME_SYSTEM.md) and [src/themes/README.md](./src/themes
 
 ## 📄 License
 
-This project is open source and available under the MIT License.
+This is a commercial product. All rights reserved.
+
+Copyright (c) 2024 jonny smillie. This software is proprietary and confidential. 
+By purchasing this template, you are granted a license to use it for your 
+projects, but you may not redistribute, resell, or share it publicly.
+
+See [LICENSE](LICENSE) for full terms and conditions.
 
 ## 🙏 Credits
 

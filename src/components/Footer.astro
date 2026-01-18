@@ -67,29 +67,29 @@ import { Icon } from "astro-icon/components";
         <ul class="space-y-2">
           <li>
             <a
-              href="https://github.com"
+              href="https://jonnysmillie.dev"
               class="flex items-center gap-2 transition-colors"
               style="color: var(--token-color-text-muted, #6b7280);"
               onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
               onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Visit our GitHub (opens in new tab)"
+              aria-label="Visit jonnysmillie.dev (opens in new tab)"
             >
-              <Icon name="tabler:brand-github" class="w-5 h-5" aria-hidden="true" />
-              <span>GitHub</span></a
+              <Icon name="tabler:world" class="w-5 h-5" aria-hidden="true" />
+              <span>Website</span></a
             >
           </li>
           <li>
             <a
-              href="https://x.com"
+              href="https://x.com/jonnysmillie"
               class="flex items-center gap-2 transition-colors"
               style="color: var(--token-color-text-muted, #6b7280);"
               onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
               onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Follow us on X (opens in new tab)"
+              aria-label="Follow @jonnysmillie on X (opens in new tab)"
             >
               <Icon name="tabler:brand-x" class="w-5 h-5" aria-hidden="true" />
               <span>X</span></a
@@ -112,7 +112,20 @@ import { Icon } from "astro-icon/components";
     </div>
     <div class="w-full border-t pt-8" style="border-color: var(--token-color-border, #e5e7eb);">
       <div class="max-w-6xl mx-auto px-4 text-center" style="color: var(--token-color-text-muted, #6b7280);">
-        <p>&copy; {new Date().getFullYear()} Astro Theme Switcher. All rights reserved.</p>
+        <p>
+          &copy; {new Date().getFullYear()} Astro Theme Switcher. All rights reserved. Made by{' '}
+          <a
+            href="https://jonnysmillie.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition-colors"
+            style="color: var(--token-color-text-muted, #6b7280);"
+            onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
+            onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #6b7280)'}
+          >
+            Jonny Smillie
+          </a>
+        </p>
       </div>
     </div>
   </div>

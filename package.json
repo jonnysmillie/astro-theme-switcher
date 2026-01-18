@@ -2,7 +2,7 @@
   "name": "astro-theme-switcher",
   "type": "module",
   "version": "0.0.1",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
