@@ -29,7 +29,7 @@ import { SITE } from "../config/site.mjs";
         <h1 class="text-5xl font-bold mb-4" style="color: var(--token-color-text-primary, #111827);">Component Library</h1>
       </ScrollReveal>
       <ScrollReveal client:load delay={0.1}>
-        <p class="text-xl mb-12" style="color: var(--token-color-text-muted, #4b5563);">
+        <p class="text-xl mb-12" style="color: var(--token-color-text-muted, #374151);">
           Production-ready, theme-aware components built with semantic tokens. All components work seamlessly across all themes.
         </p>
       </ScrollReveal>
@@ -62,7 +62,7 @@ import { SITE } from "../config/site.mjs";
             <div>
               <h3 class="text-lg font-semibold mb-4" style="color: var(--token-color-text-primary, #111827);">As Links</h3>
               <div class="flex flex-wrap gap-4">
-                <Button variant="primary" href="/features">Learn More</Button>
+                <Button variant="primary" href="/features">Learn more about features</Button>
                 <Button variant="outline" href="/about">About</Button>
               </div>
             </div>
@@ -77,19 +77,19 @@ import { SITE } from "../config/site.mjs";
           <div class="grid md:grid-cols-3 gap-6">
             <Card variant="default" padding="md">
               <h3 class="text-lg font-semibold mb-2" style="color: var(--token-color-text-primary, #111827);">Default Card</h3>
-              <p style="color: var(--token-color-text-muted, #4b5563);">
+              <p style="color: var(--token-color-text-muted, #374151);">
                 A default card with subtle shadow and surface background.
               </p>
             </Card>
             <Card variant="elevated" padding="md">
               <h3 class="text-lg font-semibold mb-2" style="color: var(--token-color-text-primary, #111827);">Elevated Card</h3>
-              <p style="color: var(--token-color-text-muted, #4b5563);">
+              <p style="color: var(--token-color-text-muted, #374151);">
                 An elevated card with stronger shadow and elevated surface.
               </p>
             </Card>
             <Card variant="outlined" padding="md">
               <h3 class="text-lg font-semibold mb-2" style="color: var(--token-color-text-primary, #111827);">Outlined Card</h3>
-              <p style="color: var(--token-color-text-muted, #4b5563);">
+              <p style="color: var(--token-color-text-muted, #374151);">
                 An outlined card with border and no shadow.
               </p>
             </Card>
@@ -500,7 +500,7 @@ import { SITE } from "../config/site.mjs";
             </div>
             <div class="flex gap-4">
               <Button variant="primary" onclick={`window.toast({ message: 'Subscribed successfully!', variant: 'success' });`}>Subscribe</Button>
-              <Button variant="outline" onclick={`if (window.openModal) window.openModal('modal-md'); else { const m = document.getElementById('modal-md'); m?.classList.remove('hidden'); m?.classList.add('flex'); }`}>Learn More</Button>
+              <Button variant="outline" onclick={`if (window.openModal) window.openModal('modal-md'); else { const m = document.getElementById('modal-md'); m?.classList.remove('hidden'); m?.classList.add('flex'); }`}>Learn more about this feature</Button>
             </div>
           </Card>
         </section>

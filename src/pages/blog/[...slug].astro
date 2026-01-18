@@ -42,9 +42,9 @@ const ogImageUrl = heroImage ? new URL(heroImage.src, import.meta.env.SITE || SI
 				<a
 					href="/blog"
 					class="inline-flex items-center gap-2 transition-colors mb-4"
-					style="color: var(--token-color-text-muted, #4b5563);"
+					style="color: var(--token-color-text-muted, #374151);"
 					onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
-					onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #4b5563)'}
+					onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #374151)'}
 				>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ const ogImageUrl = heroImage ? new URL(heroImage.src, import.meta.env.SITE || SI
 						</h1>
 					</ScrollReveal>
 					<ScrollReveal client:load delay={0.3}>
-						<div class="flex flex-wrap items-center gap-4 text-sm mb-6" style="color: var(--token-color-text-muted, #4b5563);">
+						<div class="flex flex-wrap items-center gap-4 text-sm mb-6" style="color: var(--token-color-text-muted, #374151);">
 							<time datetime={post.data.pubDate.toISOString()}>
 								Published{' '}
 								{post.data.pubDate.toLocaleDateString('en-US', {
@@ -133,9 +133,9 @@ const ogImageUrl = heroImage ? new URL(heroImage.src, import.meta.env.SITE || SI
 				<a
 					href="/blog"
 					class="transition-colors inline-flex items-center gap-2"
-					style="color: var(--token-color-text-muted, #4b5563);"
+					style="color: var(--token-color-text-muted, #374151);"
 					onmouseenter={(e) => e.currentTarget.style.color = 'var(--token-color-text-primary, #111827)'}
-					onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #4b5563)'}
+					onmouseleave={(e) => e.currentTarget.style.color = 'var(--token-color-text-muted, #374151)'}
 				>
 					← Back to Blog
 				</a>

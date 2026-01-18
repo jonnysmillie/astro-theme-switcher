@@ -18,7 +18,7 @@ import splatSvg from "../assets/splat.svg";
   <main id="main-content" role="main">
     <!-- Hero Section -->
     <section 
-      class="hero-section py-20 md:py-32 bg-gradient-to-b from-background to-surface relative overflow-hidden"
+      className="hero-section py-20 md:py-32 bg-gradient-to-b from-background to-surface relative overflow-hidden"
       style={`--splat-svg: url('${splatSvg.src}')`}
     >
       <Hero
@@ -30,48 +30,48 @@ import splatSvg from "../assets/splat.svg";
     </section>
 
     <!-- Features Section -->
-    <section class="py-20" aria-labelledby="features-heading">
-      <div class="max-w-7xl mx-auto px-4">
+    <section className="py-20" aria-labelledby="features-heading">
+      <div className="max-w-7xl mx-auto px-4">
         <ScrollReveal client:load>
-          <div class="text-center mb-16">
+          <div className="text-center mb-16">
             <Badge variant="primary" size="lg" class="mb-4">Features</Badge>
-            <h2 id="features-heading" class="text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+            <h2 id="features-heading" className="text-4xl md:text-5xl font-bold mb-4 text-text-primary">
               Everything You Need
             </h2>
-            <p class="text-xl max-w-2xl mx-auto text-text-muted">
+            <p className="text-xl max-w-2xl mx-auto text-text-muted">
               A comprehensive component library built with semantic tokens and accessibility in mind.
             </p>
           </div>
         </ScrollReveal>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           <ScrollReveal client:load delay={0.1}>
             <Card variant="elevated" padding="lg" class="h-full flex flex-col">
-              <div class="mb-4 flex-1 flex flex-col">
-                <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 bg-primary">
+              <div className="mb-4 flex-1 flex flex-col">
+                <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 bg-primary">
                   <Icon name="tabler:palette" class="w-8 h-8 text-primary-foreground" aria-hidden="true" />
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-text-primary">
+                <h3 className="text-xl font-semibold mb-2 text-text-primary">
                   Theme System
                 </h3>
-                <p class="mb-6 text-text-muted flex-1">
+                <p className="mb-6 text-text-muted flex-1">
                   Runtime theme switching with semantic tokens. Switch between multiple color themes and light/dark modes instantly. Perfect for building adaptable user interfaces.
                 </p>
-                <Button variant="outline" size="md" href="/theme">Learn More</Button>
+                <Button variant="outline" size="md" href="/theme">Learn more about the theme system</Button>
               </div>
             </Card>
           </ScrollReveal>
 
           <ScrollReveal client:load delay={0.2}>
             <Card variant="elevated" padding="lg" class="h-full flex flex-col">
-              <div class="mb-4 flex-1 flex flex-col">
-                <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 bg-success">
+              <div className="mb-4 flex-1 flex flex-col">
+                <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 bg-success">
                   <Icon name="tabler:components" class="w-8 h-8 text-success-foreground" aria-hidden="true" />
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-text-primary">
+                <h3 className="text-xl font-semibold mb-2 text-text-primary">
                   Component Library
                 </h3>
-                <p class="mb-6 text-text-muted flex-1">
+                <p className="mb-6 text-text-muted flex-1">
                   Production-ready components including buttons, cards, modals, toasts, tables, and more. All theme-aware and accessible.
                 </p>
                 <Button variant="outline" size="md" href="/components">View Components</Button>
@@ -81,17 +81,17 @@ import splatSvg from "../assets/splat.svg";
 
           <ScrollReveal client:load delay={0.3}>
             <Card variant="elevated" padding="lg" class="h-full flex flex-col">
-              <div class="mb-4 flex-1 flex flex-col">
-                <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 bg-info">
+              <div className="mb-4 flex-1 flex flex-col">
+                <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 bg-info">
                   <Icon name="tabler:bolt" class="w-8 h-8 text-info-foreground" aria-hidden="true" />
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-text-primary">
+                <h3 className="text-xl font-semibold mb-2 text-text-primary">
                   Fast & Accessible
                 </h3>
-                <p class="mb-6 text-text-muted flex-1">
+                <p className="mb-6 text-text-muted flex-1">
                   Built with Astro for optimal performance. WCAG compliant with keyboard navigation, screen reader support, and proper ARIA attributes.
                 </p>
-                <Button variant="outline" size="md" href="/about">Learn More</Button>
+                <Button variant="outline" size="md" href="/about">Learn more about accessibility</Button>
               </div>
             </Card>
           </ScrollReveal>
@@ -100,25 +100,25 @@ import splatSvg from "../assets/splat.svg";
     </section>
 
     <!-- Stats Section -->
-    <section class="py-20 bg-surface">
-      <div class="max-w-7xl mx-auto px-4">
+    <section className="py-20 bg-surface">
+      <div className="max-w-7xl mx-auto px-4">
         <ScrollReveal client:load>
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center justify-items-center">
-            <div class="flex flex-col items-center">
-              <div class="text-4xl md:text-5xl font-bold mb-2 text-primary">7+</div>
-              <div class="text-lg text-text-muted">Color Themes</div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center justify-items-center">
+            <div className="flex flex-col items-center">
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-primary">7+</div>
+              <div className="text-lg text-text-muted">Color Themes</div>
             </div>
-            <div class="flex flex-col items-center">
-              <div class="text-4xl md:text-5xl font-bold mb-2 text-primary">15+</div>
-              <div class="text-lg text-text-muted">Components</div>
+            <div className="flex flex-col items-center">
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-primary">15+</div>
+              <div className="text-lg text-text-muted">Components</div>
             </div>
-            <div class="flex flex-col items-center">
-              <div class="text-4xl md:text-5xl font-bold mb-2 text-primary">100%</div>
-              <div class="text-lg text-text-muted">Accessible</div>
+            <div className="flex flex-col items-center">
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-primary">100%</div>
+              <div className="text-lg text-text-muted">Accessible</div>
             </div>
-            <div class="flex flex-col items-center">
-              <div class="text-4xl md:text-5xl font-bold mb-2 text-primary">0</div>
-              <div class="text-lg text-text-muted">Hardcoded Colors</div>
+            <div className="flex flex-col items-center">
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-primary">0</div>
+              <div className="text-lg text-text-muted">Hardcoded Colors</div>
             </div>
           </div>
         </ScrollReveal>
@@ -126,34 +126,34 @@ import splatSvg from "../assets/splat.svg";
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-20" aria-labelledby="testimonials-heading">
-      <div class="max-w-7xl mx-auto px-4">
+    <section className="py-20" aria-labelledby="testimonials-heading">
+      <div className="max-w-7xl mx-auto px-4">
         <ScrollReveal client:load>
-          <div class="text-center mb-16">
+          <div className="text-center mb-16">
             <Badge variant="primary" size="lg" class="mb-4">Testimonials</Badge>
-            <h2 id="testimonials-heading" class="text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+            <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold mb-4 text-text-primary">
               Loved by Developers
             </h2>
-            <p class="text-xl max-w-2xl mx-auto text-text-muted">
+            <p className="text-xl max-w-2xl mx-auto text-text-muted">
               See what developers are saying about Astro Theme Switcher.
             </p>
           </div>
         </ScrollReveal>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           <ScrollReveal client:load delay={0.1}>
             <Card variant="outlined" padding="lg">
-              <div class="mb-4">
-                <div class="flex items-center mb-4">
-                  <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-primary text-primary-foreground">
+              <div className="mb-4">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-primary text-primary-foreground">
                     JD
                   </div>
                   <div>
-                    <div class="font-semibold text-text-primary">John Doe</div>
-                    <div class="text-sm text-text-muted">Frontend Developer</div>
+                    <div className="font-semibold text-text-primary">John Doe</div>
+                    <div className="text-sm text-text-muted">Frontend Developer</div>
                   </div>
                 </div>
-                <p class="text-text-muted">
+                <p className="text-text-muted">
                   "The token-based system is brilliant. I can switch themes instantly and all components adapt automatically. This is exactly what I needed for my project."
                 </p>
               </div>
@@ -162,17 +162,17 @@ import splatSvg from "../assets/splat.svg";
 
           <ScrollReveal client:load delay={0.2}>
             <Card variant="outlined" padding="lg">
-              <div class="mb-4">
-                <div class="flex items-center mb-4">
-                  <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-success text-success-foreground">
+              <div className="mb-4">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-success text-success-foreground">
                     JS
                   </div>
                   <div>
-                    <div class="font-semibold text-text-primary">Jane Smith</div>
-                    <div class="text-sm text-text-muted">UI/UX Designer</div>
+                    <div className="font-semibold text-text-primary">Jane Smith</div>
+                    <div className="text-sm text-text-muted">UI/UX Designer</div>
                   </div>
                 </div>
-                <p class="text-text-muted">
+                <p className="text-text-muted">
                   "The component library is comprehensive and well-designed. Every component is accessible and follows best practices. Highly recommended!"
                 </p>
               </div>
@@ -181,17 +181,17 @@ import splatSvg from "../assets/splat.svg";
 
           <ScrollReveal client:load delay={0.3}>
             <Card variant="outlined" padding="lg">
-              <div class="mb-4">
-                <div class="flex items-center mb-4">
-                  <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-info text-info-foreground">
+              <div className="mb-4">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-info text-info-foreground">
                     BJ
                   </div>
                   <div>
-                    <div class="font-semibold text-text-primary">Bob Johnson</div>
-                    <div class="text-sm text-text-muted">Full Stack Developer</div>
+                    <div className="font-semibold text-text-primary">Bob Johnson</div>
+                    <div className="text-sm text-text-muted">Full Stack Developer</div>
                   </div>
                 </div>
-                <p class="text-text-muted">
+                <p className="text-text-muted">
                   "The runtime theme switching is a game-changer. No rebuilds needed, and the performance is excellent. Perfect for client projects."
                 </p>
               </div>
@@ -202,15 +202,15 @@ import splatSvg from "../assets/splat.svg";
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-surface" aria-labelledby="pricing-heading">
-      <div class="max-w-7xl mx-auto px-4">
+    <section id="pricing" className="py-20 bg-surface" aria-labelledby="pricing-heading">
+      <div className="max-w-7xl mx-auto px-4">
         <ScrollReveal client:load>
-          <div class="text-center mb-16">
+          <div className="text-center mb-16">
             <Badge variant="primary" size="lg" class="mb-4">Pricing</Badge>
-            <h2 id="pricing-heading" class="text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+            <h2 id="pricing-heading" className="text-4xl md:text-5xl font-bold mb-4 text-text-primary">
               Simple, Transparent Pricing
             </h2>
-            <p class="text-xl max-w-2xl mx-auto text-text-muted">
+            <p className="text-xl max-w-2xl mx-auto text-text-muted">
               Choose the plan that's right for you. All plans include full access to the component library.
             </p>
           </div>
@@ -269,15 +269,15 @@ import splatSvg from "../assets/splat.svg";
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-20" aria-labelledby="faq-heading">
-      <div class="max-w-4xl mx-auto px-4">
+    <section className="py-20" aria-labelledby="faq-heading">
+      <div className="max-w-4xl mx-auto px-4">
         <ScrollReveal client:load>
-          <div class="text-center mb-16">
+          <div className="text-center mb-16">
             <Badge variant="primary" size="lg" class="mb-4">FAQ</Badge>
-            <h2 id="faq-heading" class="text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+            <h2 id="faq-heading" className="text-4xl md:text-5xl font-bold mb-4 text-text-primary">
               Frequently Asked Questions
             </h2>
-            <p class="text-xl max-w-2xl mx-auto text-text-muted">
+            <p className="text-xl max-w-2xl mx-auto text-text-muted">
               Everything you need to know about Astro Theme Switcher.
             </p>
           </div>
@@ -319,17 +319,17 @@ import splatSvg from "../assets/splat.svg";
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-br from-primary to-primary">
-      <div class="max-w-4xl mx-auto px-4 text-center">
+    <section className="py-20 bg-gradient-to-br from-primary to-primary">
+      <div className="max-w-4xl mx-auto px-4 text-center">
         <ScrollReveal client:load>
           <Card variant="elevated" padding="lg" class="border-0">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-text-primary">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-text-primary">
               Ready to Get Started?
             </h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto text-text-muted">
+            <p className="text-xl mb-8 max-w-2xl mx-auto text-text-muted">
               Join thousands of developers building beautiful, accessible websites with Astro Theme Switcher.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="primary" size="lg" href="#pricing">
                 View Pricing
               </Button>

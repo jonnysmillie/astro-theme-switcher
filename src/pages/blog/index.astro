@@ -28,7 +28,7 @@ const blogPosts = (await getCollection('blog')).sort(
 					</h1>
 				</ScrollReveal>
 				<ScrollReveal client:load delay={0.2}>
-					<p class="text-lg md:text-xl max-w-2xl mx-auto" style="color: var(--token-color-text-muted, #4b5563);">
+					<p class="text-lg md:text-xl max-w-2xl mx-auto" style="color: var(--token-color-text-muted, #374151);">
 						Just some posts about things I've learned.
 					</p>
 				</ScrollReveal>
@@ -36,7 +36,7 @@ const blogPosts = (await getCollection('blog')).sort(
 
 			{blogPosts.length === 0 ? (
 				<div class="text-center py-12">
-					<p style="color: var(--token-color-text-muted, #4b5563);">No blog posts yet. Check back soon!</p>
+					<p style="color: var(--token-color-text-muted, #374151);">No blog posts yet. Check back soon!</p>
 				</div>
 			) : (
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -65,7 +65,7 @@ const blogPosts = (await getCollection('blog')).sort(
 									)}
 									<ScrollReveal client:load delay={0.1 + index * 0.1}>
 										<div class="p-6 flex flex-col flex-1">
-											<div class="flex items-center gap-3 mb-3 text-sm" style="color: var(--token-color-text-muted, #4b5563);">
+											<div class="flex items-center gap-3 mb-3 text-sm" style="color: var(--token-color-text-muted, #374151);">
 												<time datetime={post.data.pubDate.toISOString()}>
 													{post.data.pubDate.toLocaleDateString('en-US', {
 														year: 'numeric',
@@ -82,7 +82,7 @@ const blogPosts = (await getCollection('blog')).sort(
 											<h2 class="text-xl md:text-2xl font-bold mb-3 transition-colors line-clamp-2" style="color: var(--token-color-text-primary, #111827);">
 												{post.data.title}
 											</h2>
-											<p class="text-sm md:text-base flex-1 line-clamp-3" style="color: var(--token-color-text-muted, #4b5563);">
+											<p class="text-sm md:text-base flex-1 line-clamp-3" style="color: var(--token-color-text-muted, #374151);">
 												{post.data.description}
 											</p>
 										</div>
