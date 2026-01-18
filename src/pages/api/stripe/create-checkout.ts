@@ -12,6 +12,9 @@
 import type { APIRoute } from "astro";
 import Stripe from "stripe";
 
+// This route must be server-side (not prerendered) to create Stripe sessions
+export const prerender = false;
+
 export const POST: APIRoute = async ({ request }) => {
   try {
     const STRIPE_SECRET_KEY = import.meta.env.STRIPE_SECRET_KEY;

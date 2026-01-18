@@ -9,6 +9,9 @@ import type { APIResponse, ContactFormData } from "../../types/astro";
 import { validateEmail, validateName, validateMessage, sanitizeInput } from "../../utils/validation";
 import { ValidationError, handleError, logError } from "../../utils/errors";
 
+// This route must be server-side (not prerendered) to handle form submissions
+export const prerender = false;
+
 export const POST: APIRoute = async ({ request }) => {
   try {
     const formData = await request.formData();

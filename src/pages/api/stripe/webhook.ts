@@ -12,6 +12,9 @@ import Stripe from "stripe";
 import { createAppAuth } from "@octokit/auth-app";
 import { Octokit } from "@octokit/rest";
 
+// This route must be server-side (not prerendered) to handle webhooks
+export const prerender = false;
+
 // Process rawBody from the request Object
 // This is needed to verify Stripe webhook signatures
 async function getRawBody(request: Request): Promise<Buffer> {

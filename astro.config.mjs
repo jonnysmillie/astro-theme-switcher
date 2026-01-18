@@ -11,7 +11,7 @@ import { SITE } from "./src/config/site.mjs";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.url,
-  output: "server", // Required for API routes on Netlify
+  // output: "static" is the default - pages are static unless they export prerender = false
   adapter: netlify(),
   integrations: [
     react(),
