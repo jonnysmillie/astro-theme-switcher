@@ -161,7 +161,8 @@ async function sendAccess(
     });
 
     try {
-        await octokit.repos.addCollaborator({
+        console.log(`🔐 Attempting to add collaborator with token type: ${token.substring(0, 4)}...`);
+        const result = await octokit.repos.addCollaborator({
             owner: GITHUB_REPO_OWNER,
             repo: GITHUB_REPO_NAME,
             username: username,
@@ -169,10 +170,19 @@ async function sendAccess(
         });
 
         console.log(`✅ Successfully granted access to ${username} for ${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}`);
+        console.log(`📊 GitHub API response status: ${result.status}`);
     } catch (error) {
         // Handle case where user is already a collaborator (Octokit returns 204 as success)
         const errorStatus = error && typeof error === 'object' && 'status' in error ? (error as { status: number }).status : undefined;
         const errorMessage = error instanceof Error ? error.message : String(error);
+        const errorResponse = error && typeof error === 'object' && 'response' in error ? (error as { response: any }).response : undefined;
+
+        console.error(`❌ GitHub API error details:`);
+        console.error(`   Status: ${errorStatus || 'Unknown'}`);
+        console.error(`   Message: ${errorMessage}`);
+        if (errorResponse) {
+            console.error(`   Response data:`, JSON.stringify(errorResponse.data, null, 2));
+        }
 
         if (errorStatus === 204) {
             console.log(`✅ User ${username} is already a collaborator on ${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}`);
