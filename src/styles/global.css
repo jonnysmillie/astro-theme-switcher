@@ -109,7 +109,7 @@ p {
 
 .prose blockquote {
   border-color: var(--token-color-border, #e5e7eb);
-  color: var(--token-color-text-muted, #6b7280);
+  color: var(--token-color-text-muted, #4b5563);
 }
 
 /* Ensure list items and strong tags have proper contrast */

@@ -14,7 +14,7 @@ export const tokens: DesignTokens = {
     text: {
       primary: '#111827',
       secondary: '#4b5563',
-      muted: '#6b7280',
+      muted: '#4b5563', // Improved contrast: changed from #6b7280 to meet WCAG AA standards
       inverse: '#ffffff',
     },
     border: '#e5e7eb',
