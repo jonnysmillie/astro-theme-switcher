@@ -99,7 +99,7 @@ const motionEasing = 'var(--token-motion-easing-default)';
               key={column.key}
               class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider cursor-pointer transition-colors"
               style={`
-                color: var(--token-color-text-muted, #6b7280);
+                color: var(--token-color-text-muted, #4b5563);
                 transition-duration: ${motionDuration};
                 transition-timing-function: ${motionEasing};
               `}
@@ -115,7 +115,7 @@ const motionEasing = 'var(--token-motion-easing-default)';
                 const headers = table.querySelectorAll('thead th');
                 headers.forEach(h => {
                   h.querySelector('.sort-icon')?.remove();
-                  h.style.color = 'var(--token-color-text-muted, #6b7280)';
+                  h.style.color = 'var(--token-color-text-muted, #4b5563)';
                 });
                 event.currentTarget.style.color = 'var(--token-color-text-primary, #111827)';
                 const icon = document.createElement('span');
@@ -188,7 +188,7 @@ const motionEasing = 'var(--token-motion-easing-default)';
   
   {pagination && data.length > itemsPerPage && (
     <div class="mt-4 flex items-center justify-between">
-      <div class="text-sm" style="color: var(--token-color-text-muted, #6b7280);">
+      <div class="text-sm" style="color: var(--token-color-text-muted, #4b5563);">
         Showing <span id={`${tableId}-start`}>1</span> to <span id={`${tableId}-end`}>{Math.min(itemsPerPage, data.length)}</span> of <span id={`${tableId}-total`}>{data.length}</span> results
       </div>
       <div class="flex gap-2">
