@@ -29,10 +29,10 @@ export default defineConfig({
       cssMinify: "lightningcss",
       minify: "terser",
       terserOptions: {
-        compress: {
-          drop_console: false, // Keep console logs for API route debugging
-          drop_debugger: true,
-        },
+          compress: {
+            drop_console: true, // Remove console.log in production
+            drop_debugger: true,
+          },
       },
     },
   },

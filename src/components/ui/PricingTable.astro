@@ -125,6 +125,7 @@ const motionEasing = 'var(--token-motion-easing-default)';
       <a
         href={plan.cta.href}
         class="block w-full text-center px-4 py-2 rounded-lg font-medium transition-all"
+        {...(plan.cta.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
         style={`
           background-color: ${plan.cta.variant === 'outline' ? 'transparent' : plan.cta.variant === 'secondary' ? 'var(--token-color-secondary)' : 'var(--token-color-primary)'};
           color: ${plan.cta.variant === 'outline' ? 'var(--token-color-text-primary)' : plan.cta.variant === 'secondary' ? 'var(--token-color-secondary-foreground)' : 'var(--token-color-primary-foreground)'};

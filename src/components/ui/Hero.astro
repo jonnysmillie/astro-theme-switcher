@@ -15,6 +15,7 @@
  */
 
 import Button from './Button.astro';
+import { Icon } from 'astro-icon/components';
 
 export interface Props {
   title: string;
@@ -23,11 +24,13 @@ export interface Props {
     text: string;
     href: string;
     variant?: 'primary' | 'secondary' | 'outline';
+    icon?: string;
   };
   secondaryCta?: {
     text: string;
     href: string;
     variant?: 'primary' | 'secondary' | 'outline';
+    icon?: string;
   };
   class?: string;
 }
@@ -69,7 +72,13 @@ const {
           href={primaryCta.href}
           variant={primaryCta.variant || 'primary'}
           size="lg"
+          ariaLabel={primaryCta.href.startsWith('http') ? `${primaryCta.text} (opens in new tab)` : undefined}
+          target={primaryCta.href.startsWith('http') ? '_blank' : undefined}
+          rel={primaryCta.href.startsWith('http') ? 'noopener noreferrer' : undefined}
         >
+          {primaryCta.icon && (
+            <Icon name={primaryCta.icon} class="w-5 h-5" aria-hidden="true" />
+          )}
           {primaryCta.text}
         </Button>
       )}
@@ -78,7 +87,13 @@ const {
           href={secondaryCta.href}
           variant={secondaryCta.variant || 'outline'}
           size="lg"
+          ariaLabel={secondaryCta.href.startsWith('http') ? `${secondaryCta.text} (opens in new tab)` : undefined}
+          target={secondaryCta.href.startsWith('http') ? '_blank' : undefined}
+          rel={secondaryCta.href.startsWith('http') ? 'noopener noreferrer' : undefined}
         >
+          {secondaryCta.icon && (
+            <Icon name={secondaryCta.icon} class="w-5 h-5" aria-hidden="true" />
+          )}
           {secondaryCta.text}
         </Button>
       )}
