@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig } from "astro/config";
-import netlify from "@astrojs/netlify";
 import react from "@astrojs/react";
 import icon from "astro-icon";
 import mdx from "@astrojs/mdx";
@@ -12,7 +11,6 @@ import { SITE } from "./src/config/site.mjs";
 export default defineConfig({
   site: SITE.url,
   // output: "static" is the default - pages are static unless they export prerender = false
-  adapter: netlify(),
   integrations: [
     react(),
     icon(),
