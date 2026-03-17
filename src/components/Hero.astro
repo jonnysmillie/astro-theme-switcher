@@ -34,13 +34,15 @@ import sketchSvg from "../assets/sketch.svg";
         <span>View Components</span>
       </a>
       <a
-        href="/components"
-        class="inline-block px-8 py-3 border rounded-lg transition-colors font-medium"
+        href="/theme"
+        class="inline-flex items-center justify-center gap-2 px-8 py-3 border rounded-lg transition-colors font-medium"
         style="background-color: var(--token-color-background, #ffffff); color: var(--token-color-text-primary, #111827); border-color: var(--token-color-border, #e5e7eb);"
         onmouseenter={(e) => e.currentTarget.style.backgroundColor = 'var(--token-color-accent, rgba(0, 0, 0, 0.05))'}
         onmouseleave={(e) => e.currentTarget.style.backgroundColor = 'var(--token-color-background, #ffffff)'}
+        aria-label="Explore theme switcher"
       >
-        View Components
+        <Icon name="tabler:palette" class="w-5 h-5" aria-hidden="true" />
+        <span>Explore Themes</span>
       </a>
     </div>
   </ScrollReveal>
