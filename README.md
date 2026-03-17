@@ -19,12 +19,13 @@ A production-ready, token-based themeable design system for Astro. Build beautif
 
 ### Core Framework
 
-- **Astro** `^5.16.6` - The web framework for content-driven websites
+- **Astro** `^6.0.5` - The web framework for content-driven websites
 
 ### Integrations
 
-- **@astrojs/react** `^4.4.2` - React integration for Astro
-- **@astrojs/mdx** `^4.3.13` - MDX support for writing JSX in Markdown
+- **@astrojs/react** `^5.0.0` - React integration for Astro
+- **@astrojs/mdx** `^5.0.1` - MDX support for writing JSX in Markdown
+- **@astrojs/sitemap** `^3.7.1` - Sitemap generation
 - **astro-icon** `^1.1.5` - Icon component library
 
 ### Styling
@@ -247,6 +248,7 @@ export default {
 
 - **@astrojs/react** - React integration
 - **@astrojs/mdx** - MDX support
+- **@astrojs/sitemap** - Sitemap generation
 - **astro-icon** - Icon component library
 
 ### Styling
