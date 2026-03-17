@@ -65,10 +65,10 @@ To render a post, you need to:
 3. Display it in your template
 
 ```typescript
-import { getEntry } from 'astro:content';
+import { getEntry, render } from 'astro:content';
 
 const post = await getEntry('blog', 'post-slug');
-const { Content } = await post.render();
+const { Content } = await render(post);
 ```
 
 Then in your template:

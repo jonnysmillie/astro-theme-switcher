@@ -139,7 +139,7 @@ The codebase is structured for:
 1. **Resale**: Clear architecture, comprehensive documentation
 2. **White-labeling**: Easy to rebrand and customize
 3. **Agency use**: Can power multiple client sites
-4. **Developer purchase**: Clear patterns, easy to extend
+4. **Developer adoption**: Clear patterns, easy to extend
 
 ## Extensibility
 

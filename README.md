@@ -80,7 +80,7 @@ A production-ready, token-based themeable design system for Astro. Build beautif
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 22.12.0 or higher (required for Astro 6)
 - npm, pnpm, or yarn
 
 ### Installation
@@ -139,11 +139,11 @@ Sass is installed and ready to use. You can use Sass in component `<style>` bloc
 
 ```astro
 <style lang="scss">
-  $primary-color: #000;
+	$primary-color: #000;
 
-  .my-component {
-    color: $primary-color;
-  }
+	.my-component {
+		color: $primary-color;
+	}
 </style>
 ```
 
@@ -159,7 +159,7 @@ A React component using Framer Motion for scroll-triggered animations:
 import ScrollReveal from "./ScrollReveal.tsx";
 
 <ScrollReveal client:load delay={0.2} scale={true}>
-  <div>Your content here</div>
+	<div>Your content here</div>
 </ScrollReveal>;
 ```
 
@@ -194,7 +194,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  # My MDX Page This is **markdown** with <Component /> support!
+	# My MDX Page This is **markdown** with <Component /> support!
 </Layout>
 ```
 
@@ -214,14 +214,14 @@ See `src/pages/example.mdx` for a complete example.
 
 ```javascript
 export default defineConfig({
-  integrations: [
-    react(), // React support
-    icon(), // Astro Icons
-    mdx(), // MDX support
-  ],
-  vite: {
-    plugins: [tailwindcss()],
-  },
+	integrations: [
+		react(), // React support
+		icon(), // Astro Icons
+		mdx(), // MDX support
+	],
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });
 ```
 
@@ -231,7 +231,7 @@ export default defineConfig({
 import typography from "@tailwindcss/typography";
 
 export default {
-  plugins: [typography],
+	plugins: [typography],
 };
 ```
 
@@ -293,13 +293,7 @@ See [THEME_SYSTEM.md](./THEME_SYSTEM.md) and [src/themes/README.md](./src/themes
 
 ## 📄 License
 
-This is a commercial product. All rights reserved.
-
-Copyright (c) 2024 jonny smillie. This software is proprietary and confidential. 
-By purchasing this template, you are granted a license to use it for your 
-projects, but you may not redistribute, resell, or share it publicly.
-
-See [LICENSE](LICENSE) for full terms and conditions.
+MIT License. See [LICENSE](LICENSE) for full terms.
 
 ## 🙏 Credits
 
@@ -312,4 +306,4 @@ Built with:
 
 ---
 
-**Ready to build something amazing?** [Download Astro Theme Switcher](https://github.com/jonnysmillie/astro-theme-switcher) and start creating beautiful, themeable websites!
+**Ready to build something amazing?** Clone the repo and start creating beautiful, themeable websites!

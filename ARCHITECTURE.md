@@ -208,4 +208,4 @@ The codebase is structured for:
 - **Resale**: Clear architecture, well-documented
 - **White-labeling**: Easy to rebrand and customize
 - **Agency use**: Can power multiple client sites
-- **Developer purchase**: Clear patterns, easy to extend
+- **Developer adoption**: Clear patterns, easy to extend

@@ -23,17 +23,15 @@ import sketchSvg from "../assets/sketch.svg";
   <ScrollReveal client:load delay={0.4}>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a
-        href="https://jonnysmillie.gumroad.com/l/astro-theme-switcher"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/components"
         class="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg transition-colors font-medium"
         style="background-color: var(--token-color-primary, #000000); color: var(--token-color-primary-foreground, #ffffff);"
         onmouseenter={(e) => e.currentTarget.style.opacity = '0.9'}
         onmouseleave={(e) => e.currentTarget.style.opacity = '1'}
-        aria-label="Buy this template on Gumroad (opens in new tab)"
+        aria-label="View component library"
       >
-        <Icon name="tabler:shopping-cart" class="w-5 h-5" aria-hidden="true" />
-        <span>Buy this template</span>
+        <Icon name="tabler:components" class="w-5 h-5" aria-hidden="true" />
+        <span>View Components</span>
       </a>
       <a
         href="/components"

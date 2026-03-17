@@ -46,7 +46,7 @@ const blogPosts = (await getCollection('blog')).sort(
 						return (
 							<article class="rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden flex flex-col" style="background-color: var(--token-color-background, #ffffff);">
 								<a
-									href={`/blog/${post.slug}`}
+									href={`/blog/${post.id}`}
 									class="block group"
 								>
 									{heroImage && (
@@ -54,7 +54,7 @@ const blogPosts = (await getCollection('blog')).sort(
 											<Image
 												src={heroImage}
 												alt={post.data.title}
-												transition:name={`blog-image-${post.slug}`}
+												transition:name={`blog-image-${post.id}`}
 												class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200 rounded-t-lg"
 												style="border-radius: 0.5rem 0.5rem 0 0;"
 												loading="lazy"

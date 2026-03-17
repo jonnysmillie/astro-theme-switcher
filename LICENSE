@@ -1,52 +1,21 @@
-PROPRIETARY LICENSE
+MIT License
 
-Copyright (c) 2026 jonny smillie. All rights reserved.
+Copyright (c) 2026 jonny smillie
 
-This software and associated documentation files (the "Software") are the 
-proprietary and confidential property of jonny smillie.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-NOTICE: This Software is licensed, not sold. By purchasing and using this 
-Software, you agree to be bound by the terms of this license.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-GRANT OF LICENSE:
-Subject to the terms and conditions of this license, you are granted a 
-non-exclusive, non-transferable, limited license to:
-
-1. Use the Software for your personal or commercial projects
-2. Modify the Software for your own use
-3. Create derivative works based on the Software for your own use
-
-RESTRICTIONS:
-You may NOT:
-
-1. Redistribute, resell, sublicense, or otherwise transfer the Software or 
-   any portion thereof to any third party
-2. Share, publish, or make available the Software or any portion thereof 
-   publicly (including but not limited to public repositories, code sharing 
-   platforms, or websites)
-3. Remove or alter any copyright notices, proprietary markings, or 
-   identification of the Software
-4. Use the Software to create a competing product or service
-5. Reverse engineer, decompile, or disassemble the Software
-
-OWNERSHIP:
-The Software and all intellectual property rights therein are and shall 
-remain the exclusive property of jonny smillie. This license does not 
-transfer any ownership rights to you.
-
-TERMINATION:
-This license is effective until terminated. Your rights under this license 
-will terminate automatically without notice if you fail to comply with any 
-of its terms. Upon termination, you must destroy all copies of the Software 
-in your possession.
-
-DISCLAIMER:
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-For questions about this license, please contact the copyright holder.

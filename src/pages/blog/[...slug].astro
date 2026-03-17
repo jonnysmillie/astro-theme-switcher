@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import ScrollReveal from '../../components/ScrollReveal.tsx';
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
 import { SITE } from '../../config/site.mjs';
 import { Image } from 'astro:assets';
 import { getBlogImage } from '../../utils/blogImages';
@@ -11,7 +11,7 @@ import { getBlogImage } from '../../utils/blogImages';
 export async function getStaticPaths() {
 	const blogPosts = await getCollection('blog');
 	return blogPosts.map((post) => ({
-		params: { slug: post.slug },
+		params: { slug: post.id },
 		props: { post },
 	}));
 }
@@ -21,7 +21,7 @@ type Props = {
 };
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 const heroImage = getBlogImage(post.data.heroImage);
 // Get the image URL for ogImage meta tag
 const ogImageUrl = heroImage ? new URL(heroImage.src, import.meta.env.SITE || SITE.url).href : undefined;
@@ -30,7 +30,7 @@ const ogImageUrl = heroImage ? new URL(heroImage.src, import.meta.env.SITE || SI
 <Layout
 	title={`${post.data.title} | ${SITE.title}`}
 	description={post.data.description}
-	canonicalURL={`${SITE.url}/blog/${post.slug}`}
+	canonicalURL={`${SITE.url}/blog/${post.id}`}
 	ogType="article"
 	ogImage={ogImageUrl}
 >
@@ -68,7 +68,7 @@ const ogImageUrl = heroImage ? new URL(heroImage.src, import.meta.env.SITE || SI
 					<Image
 						src={heroImage}
 						alt={post.data.title}
-						transition:name={`blog-image-${post.slug}`}
+						transition:name={`blog-image-${post.id}`}
 						class="w-full h-96 md:h-[500px] object-cover rounded-lg"
 						style="border-radius: 0.5rem;"
 						loading="eager"
