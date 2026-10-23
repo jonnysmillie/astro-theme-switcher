@@ -81,7 +81,7 @@ A production-ready, token-based themeable design system for Astro. Build beautif
 
 ### Prerequisites
 
-- Node.js 22.12.0 or higher (required for Astro 6)
+- Node.js 22.23.4 or higher (required for Astro 6; includes the October 2026 security fixes)
 - npm, pnpm, or yarn
 
 ### Installation
